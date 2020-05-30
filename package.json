@@ -1,0 +1,73 @@
+{
+  "name": "stay-on-track-backend",
+  "version": "1.0.0",
+  "description": "A time tracking tool for users to track time spent on tasks for their individual clients. Focusing on a simpliefied seamless experince with real-time sharing functionality.",
+  "main": "src/server/app.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha ./test/**/*.test.js",
+    "start": "nodemon src/server/app.js",
+    "lint": "eslint ./src --fix",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\"",
+    "precommit": "lint-staged",
+    "seed": "knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DBuckley0126/template-node-koa-backend.git"
+  },
+  "author": "Danny Buckley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DBuckley0126/template-node-koa-backend/issues"
+  },
+  "homepage": "https://github.com/DBuckley0126/template-node-koa-backend#readme",
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@koa/cors": "2.2.3",
+    "axios": "0.19.2",
+    "bcryptjs": "^2.4.3",
+    "chai-as-promised": "7.1.1",
+    "dotenv": "8.2.0",
+    "http-errors": "1.7.3",
+    "husky": "4.2.1",
+    "knex": "^0.13.0",
+    "koa": "2.11.0",
+    "koa-body": "4.1.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-ejs": "4.3.0",
+    "koa-json": "2.0.2",
+    "koa-logger": "3.2.1",
+    "koa-passport": "^4.0.1",
+    "koa-redis": "^3.1.1",
+    "koa-router": "8.0.8",
+    "koa-session": "^5.5.1",
+    "lint-staged": "10.0.7",
+    "passport-local": "^1.0.0",
+    "pg": "^7.1.2",
+    "request": "2.88.2",
+    "request-promise": "4.2.5"
+  },
+  "devDependencies": {
+    "chai": "4.1.1",
+    "chai-http": "3.0.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "mocha": "3.5.0",
+    "nodemon": "2.0.3",
+    "sinon": "^4.1.5",
+    "eslint-config-fbjs": "3.1.1",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-config-react-app": "5.2.0",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-flowtype": "3.13.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.2",
+    "prettier": "1.19.1"
+  }
+}
