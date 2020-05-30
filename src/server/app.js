@@ -8,7 +8,7 @@ const Json = require("koa-json");
 const cors = require("@koa/cors");
 
 const indexRoutes = require("./routes/index");
-// const testRoutes = require("./routes/test");
+const testRoutes = require("./routes/test");
 
 const app = new Koa();
 const PORT = process.env.PORT || 5000;
@@ -26,7 +26,7 @@ app.use(cors());
 
 app.use(indexRoutes.routes());
 
-// app.use(testRoutes.routes());
+app.use(testRoutes.routes());
 
 const server = app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
