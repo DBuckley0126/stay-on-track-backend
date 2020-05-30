@@ -1,0 +1,9 @@
+{
+  "env": {
+    "TZ": "UTC",
+    "NODE_ENV": "development",
+    "LOG_LEVEL": "debug"
+  },
+  "ext": "js,html,json",
+  "signal": "SIGTERM"
+}
